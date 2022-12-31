@@ -1,0 +1,65 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "ec-links/default-block",
+	"version": "0.1.0",
+	"title": "EC Links（通販商品リンク）",
+	"category": "widgets",
+	"icon": "store",
+	"description": "Amazonや楽天市場、Yahoo!ショッピングのアフィリエイトリンクを綺麗にかんたんにまとめて表示。",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"source": "text",
+			"selector": "p.ec-links-default-block-title"
+		},
+		"description": {
+			"type": "string",
+			"source": "text",
+			"selector": "p.ec-links-default-block-description"
+		},
+		"image": {
+			"type": "string",
+			"source": "html",
+			"selector": "div.ec-links-default-block-image"
+		},
+		"skin": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "ul.ec-links-default-block-links",
+			"attribute": "data-skin",
+			"default": "default"
+		},
+		"links": {
+			"type": "array",
+			"default": [],
+			"source": "query",
+			"selector": "ul.ec-links-default-block-links li",
+			"query": {
+				"type": {
+					"type": "string",
+					"source": "attribute",
+					"attribute": "class"
+				},
+				"tag": {
+					"type": "string",
+					"source": "html"
+				},
+				"newtab": {
+					"type": "boolean",
+					"source": "attribute",
+					"attribute": "target",
+					"selector": "ul.ec-links-default-block-links li a",
+					"default": false
+				}
+			}
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "ec-links",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

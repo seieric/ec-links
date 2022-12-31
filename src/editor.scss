@@ -1,0 +1,28 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+/* 各通販サイトのリンク色 */
+$amazon: #f3a847;
+$yahoo: #1995df;
+$rakuten: #bf0000;
+$text: #fff;
+.ec-links-editor-wrapper{
+	width: 100%;
+}
+
+.ec-links-inline-block{
+	display: inline-block;
+}
+
+/* リンクタグの入力欄を色付けする */
+div.ec-amazon div textarea{
+	border: 2px solid $amazon;
+}
+div.ec-rakuten div textarea{
+	border: 2px solid $rakuten;
+}
+div.ec-yahoo div textarea{
+	border: 2px solid $yahoo;
+}

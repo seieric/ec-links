@@ -1,0 +1,109 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+/* 各通販サイトのリンク色 */
+$amazon: #f3a847;
+$yahoo: #1995df;
+$rakuten: #bf0000;
+$text: #fff;
+
+.ec-links-default-block-container {
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid #d1d1d1;
+    padding: 5px;
+    height: auto;
+    color: #333;
+    align-items: center;
+}
+
+.ec-links-default-block-image {
+    flex-basis: 25%;
+    max-width: 25%;
+}
+
+.ec-links-default-block-image img, .ec-links-default-block-image a img{
+    width: 100%;
+}
+
+.ec-links-default-block-image>img {
+    display: none;
+    visibility: hidden;
+}
+
+.ec-links-default-block-details {
+    flex-basis: 75%;
+    padding: 5px 5px 0 10px;
+    align-self: flex-start;
+}
+
+.ec-links-default-block-details p {
+    margin: 0;
+}
+
+p.ec-links-default-block-title {
+    margin-bottom: 0.8em;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+p.ec-links-default-block-description {
+    font-size: 0.9em;
+}
+
+ul.ec-links-default-block-links {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+ul.ec-links-default-block-links li {
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.ec-links-default-block-details ul.ec-links-default-block-links li a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 6px 24px;
+    color: $text;
+    font-size: .9em;
+}
+
+li.ec-amazon {
+    background: $amazon;
+}
+
+li.ec-rakuten {
+    background: $rakuten;
+}
+
+li.ec-yahoo {
+    background: $yahoo;
+}
+
+li.ec-amazon a:hover,
+li.ec-rakuten a:hover,
+li.ec-yahoo a:hover {
+    background: #fff;
+    border: 1px solid;
+}
+
+.ec-links-default-block-details ul.ec-links-default-block-links li.ec-rakuten a:hover {
+    border-color: $rakuten;
+    color: $rakuten;
+}
+
+.ec-links-default-block-details ul.ec-links-default-block-links li.ec-yahoo a:hover {
+    border-color: $yahoo;
+    color: $yahoo;
+}
+
+.ec-links-default-block-details ul.ec-links-default-block-links li.ec-amazon a:hover {
+    border-color: $amazon;
+    color: $amazon;
+}
